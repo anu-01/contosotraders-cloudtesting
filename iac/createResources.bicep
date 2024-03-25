@@ -720,6 +720,10 @@ resource productimagesstgacc 'Microsoft.Storage/storageAccounts@2022-09-01' = {
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
+    
+  properties: {
+    allowBlobPublicAccess: true // This allows public access
+  }
 
   // blob service
   resource productimagesstgacc_blobsvc 'blobServices' = {
@@ -757,6 +761,12 @@ resource uistgacc 'Microsoft.Storage/storageAccounts@2022-09-01' = {
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
+
+  properties: {
+    supportsHttpsTrafficOnly: true
+    accessTier: 'Hot'
+    allowBlobPublicAccess: true // This allows public access
+  }
 
   // blob service
   resource uistgacc_blobsvc 'blobServices' = {
@@ -829,6 +839,11 @@ resource ui2stgacc 'Microsoft.Storage/storageAccounts@2022-05-01' = {
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
+  properties: {
+    supportsHttpsTrafficOnly: true
+    accessTier: 'Hot'
+    allowBlobPublicAccess: true // This allows public access
+  }
 
   // blob service
   resource ui2stgacc_blobsvc 'blobServices' = {
@@ -905,6 +920,11 @@ resource imageclassifierstgacc 'Microsoft.Storage/storageAccounts@2022-09-01' = 
     name: 'Standard_LRS'
   }
   kind: 'StorageV2'
+
+  properties: {
+    allowBlobPublicAccess: true // This allows public access
+  }
+  
 
   // blob service
   resource imageclassifierstgacc_blobsvc 'blobServices' = {
