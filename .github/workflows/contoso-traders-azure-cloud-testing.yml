@@ -1,4 +1,4 @@
-name: contoso-traders-cloud-testing
+name: contoso-traders-azure-cloud-testing
 
 on:
   workflow_dispatch:
